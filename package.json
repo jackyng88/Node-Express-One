@@ -1,0 +1,18 @@
+{
+  "name": "node-express-one",
+  "version": "1.0.0",
+  "description": "NodeJS and ExpressJS tutorial",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "Jacky Ng",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
