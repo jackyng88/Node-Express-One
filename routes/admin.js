@@ -1,0 +1,17 @@
+const express = require('express');
+
+const router = express.Router();
+
+// Similar to how we use app.use() we can use router.use, or router.get, etc.
+router.get('/add-product', (req, res, next) => {
+  res.send('<form action="/product" method="POST"><input type="text" name="title"><button type="submit">Add Product</button></input></form>');
+  // Since we are sending a response we don't want to call next()
+
+});
+
+router.post('/product', (req, res, next) => {
+  console.log(req.body);
+  res.redirect('/');
+});
+
+module.exports = router;
