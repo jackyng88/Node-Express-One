@@ -21,7 +21,7 @@ next - is a function that will be passed to the below function.
 // it will return undefined. Note - will not parse all types of bodys like files, JSON, etc.
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use(adminRoutes);
+app.use('/admin',adminRoutes);
 
 app.use(shopRoutes);
 
