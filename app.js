@@ -1,3 +1,5 @@
+const path = require('path');
+
 //const http = require('http');   // Not necessary with app.listen()
 const express = require('express');
 
@@ -28,7 +30,7 @@ app.use(shopRoutes);
 // 404 Page not found middleware
 app.use((req, res, next) => {
   // note - you can chain these functions, but send has to be at the very end.
-  res.status(404).send('<h1>Page not found!</h1>');
+  res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 });
 
 app.listen(3000);
